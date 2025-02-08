@@ -1,0 +1,125 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border-color: aqua;
+    border-width: 10px;
+    border-style: double;
+    background-color: aliceblue;
+    
+    
+}
+.header{
+    display:flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* .score{
+    padding-right: 350px;
+} */
+.navigation{
+    padding-top:200;
+    gap: 0.5em;
+    flex-wrap: wrap; 
+    
+
+}
+.nav-button{
+    border-radius: 50%;
+    background-color:orange;
+    width:30px;
+    height:30px;
+}
+.nav-button:hover{
+    opacity:80%;
+}
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+* {
+    background-color:aliceblue;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    background-color:#f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+}
+.quiz-container{
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    height: 400px;
+    width:700px;
+}
+.option{
+    /* display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3px;
+    flex-wrap: wrap;
+    border-color:null; */
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: "Plus Jakarta Sans", serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5 rem;
+    width:600;
+
+}
+.option:hover{
+    background-color:antiquewhite;
+}
+#restart-button{
+    border-radius: 25%;
+    color: red;
+}
+.resultContainer{
+    background-color: aliceblue;
+}
+.option.disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.option.disabled:hover{
+    cursor: not-allowed;
+}
+#right{
+    background-color: green;
+}
+#wrong{
+    background-color:red;
+}
+
+
+    
+
+#options{
+    height: 200px;
+}
