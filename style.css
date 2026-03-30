@@ -1,125 +1,128 @@
+:root {
+  --primary: #4a90e2;
+  --success: #2ecc71;
+  --error: #e74c3c;
+  --bg: #f0f2f5;
+  --text: #2d3436;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px;
-    border-color: aqua;
-    border-width: 10px;
-    border-style: double;
-    background-color: aliceblue;
-    
-    
-}
-.header{
-    display:flex;
-    
-    flex-direction: row;
-    justify-content: space-between;
-}
-/* .score{
-    padding-right: 350px;
-} */
-.navigation{
-    padding-top:200;
-    gap: 0.5em;
-    flex-wrap: wrap; 
-    
-
-}
-.nav-button{
-    border-radius: 50%;
-    background-color:orange;
-    width:30px;
-    height:30px;
-}
-.nav-button:hover{
-    opacity:80%;
-}
-.container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-* {
-    background-color:aliceblue;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-user agent stylesheet
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-body {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
-    background-color:#f0f2f5;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: aliceblue;
-}
-.quiz-container{
-    background-color: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    height: 400px;
-    width:700px;
-}
-.option{
-    /* display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:3px;
-    flex-wrap: wrap;
-    border-color:null; */
-    padding: 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: "Plus Jakarta Sans", serif;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.5 rem;
-    width:600;
-
-}
-.option:hover{
-    background-color:antiquewhite;
-}
-#restart-button{
-    border-radius: 25%;
-    color: red;
-}
-.resultContainer{
-    background-color: aliceblue;
-}
-.option.disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-.option.disabled:hover{
-    cursor: not-allowed;
-}
-#right{
-    background-color: green;
-}
-#wrong{
-    background-color:red;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Header & Timer */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
-    
+/* Question Area */
+#question {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
 
-#options{
-    height: 200px;
+/* Options Grid */
+#options {
+  display: grid;
+  gap: 12px;
+}
+
+.option {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.option:hover:not(.disabled) {
+  border-color: var(--primary);
+  background: #ebf5ff;
+  transform: translateY(-2px);
+}
+
+.option.correct {
+  background-color: var(--success) !important;
+  color: white;
+  border-color: #27ae60;
+}
+
+.option.incorrect {
+  background-color: var(--error) !important;
+  color: white;
+  border-color: #c0392b;
+}
+
+/* Navigation Circles */
+#navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.nav-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #dfe6e9;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-button.active {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.2);
+}
+
+.nav-button.attempted {
+  background: #b2bec3;
+}
+
+/* Alert/Toast */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.alert.success {
+  background: var(--success);
+}
+.alert.error {
+  background: var(--error);
 }
